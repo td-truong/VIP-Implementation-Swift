@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B08E46A26C230A200B4914A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08E46926C230A200B4914A /* AppDelegate.swift */; };
-		5B08E46C26C230A200B4914A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08E46B26C230A200B4914A /* SceneDelegate.swift */; };
 		5B08E46E26C230A200B4914A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08E46D26C230A200B4914A /* ViewController.swift */; };
-		5B08E47126C230A200B4914A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B08E46F26C230A200B4914A /* Main.storyboard */; };
 		5B08E47326C230A400B4914A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B08E47226C230A400B4914A /* Assets.xcassets */; };
 		5B08E47626C230A400B4914A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B08E47426C230A400B4914A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		5B08E46626C230A200B4914A /* VIP-Implementation-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-Implementation-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B08E46926C230A200B4914A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B08E46B26C230A200B4914A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B08E46D26C230A200B4914A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B08E47026C230A200B4914A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B08E47226C230A400B4914A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B08E47526C230A400B4914A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B08E47726C230A400B4914A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,9 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				5B08E46926C230A200B4914A /* AppDelegate.swift */,
-				5B08E46B26C230A200B4914A /* SceneDelegate.swift */,
 				5B08E46D26C230A200B4914A /* ViewController.swift */,
-				5B08E46F26C230A200B4914A /* Main.storyboard */,
 				5B08E47226C230A400B4914A /* Assets.xcassets */,
 				5B08E47426C230A400B4914A /* LaunchScreen.storyboard */,
 				5B08E47726C230A400B4914A /* Info.plist */,
@@ -126,7 +120,6 @@
 			files = (
 				5B08E47626C230A400B4914A /* LaunchScreen.storyboard in Resources */,
 				5B08E47326C230A400B4914A /* Assets.xcassets in Resources */,
-				5B08E47126C230A200B4914A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,21 +132,12 @@
 			files = (
 				5B08E46E26C230A200B4914A /* ViewController.swift in Sources */,
 				5B08E46A26C230A200B4914A /* AppDelegate.swift in Sources */,
-				5B08E46C26C230A200B4914A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B08E46F26C230A200B4914A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B08E47026C230A200B4914A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B08E47426C230A400B4914A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +272,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VIP-Implementation-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VIP-Implementation-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
