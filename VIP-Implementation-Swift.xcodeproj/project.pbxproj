@@ -55,7 +55,20 @@
 		5B093D2126C3C4A500674D25 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2026C3C4A500674D25 /* UserCell.swift */; };
 		5B093D2526C3C4B500674D25 /* UITableView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2326C3C4B500674D25 /* UITableView+Exts.swift */; };
 		5B093D2626C3C4B500674D25 /* UITableViewCell+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2426C3C4B500674D25 /* UITableViewCell+Exts.swift */; };
+		5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */; };
+		5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */; };
+		5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B093D3026C3C9EA00674D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B08E45E26C230A200B4914A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B08E46526C230A200B4914A;
+			remoteInfo = "VIP-Implementation-Swift";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B08E46626C230A200B4914A /* VIP-Implementation-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIP-Implementation-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,10 +121,22 @@
 		5B093D2026C3C4A500674D25 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		5B093D2326C3C4B500674D25 /* UITableView+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Exts.swift"; sourceTree = "<group>"; };
 		5B093D2426C3C4B500674D25 /* UITableViewCell+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Exts.swift"; sourceTree = "<group>"; };
+		5B093D2B26C3C9EA00674D25 /* VIP-Implementation-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIP-Implementation-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B093D2F26C3C9EA00674D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListControllerTests.swift; sourceTree = "<group>"; };
+		5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractorTests.swift; sourceTree = "<group>"; };
+		5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B08E46326C230A200B4914A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B093D2826C3C9EA00674D25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5B08E46826C230A200B4914A /* VIP-Implementation-Swift */,
+				5B093D2C26C3C9EA00674D25 /* VIP-Implementation-SwiftTests */,
 				5B08E46726C230A200B4914A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				5B08E46626C230A200B4914A /* VIP-Implementation-Swift.app */,
+				5B093D2B26C3C9EA00674D25 /* VIP-Implementation-SwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +292,33 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		5B093D2C26C3C9EA00674D25 /* VIP-Implementation-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D3526C3CA3900674D25 /* Cases */,
+				5B093D2F26C3C9EA00674D25 /* Info.plist */,
+			);
+			path = "VIP-Implementation-SwiftTests";
+			sourceTree = "<group>";
+		};
+		5B093D3526C3CA3900674D25 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D3626C3CA4400674D25 /* UserList */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		5B093D3626C3CA4400674D25 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */,
+				5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */,
+				5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +339,24 @@
 			productReference = 5B08E46626C230A200B4914A /* VIP-Implementation-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5B093D2A26C3C9EA00674D25 /* VIP-Implementation-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B093D3226C3C9EA00674D25 /* Build configuration list for PBXNativeTarget "VIP-Implementation-SwiftTests" */;
+			buildPhases = (
+				5B093D2726C3C9EA00674D25 /* Sources */,
+				5B093D2826C3C9EA00674D25 /* Frameworks */,
+				5B093D2926C3C9EA00674D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B093D3126C3C9EA00674D25 /* PBXTargetDependency */,
+			);
+			name = "VIP-Implementation-SwiftTests";
+			productName = "VIP-Implementation-SwiftTests";
+			productReference = 5B093D2B26C3C9EA00674D25 /* VIP-Implementation-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,6 +368,11 @@
 				TargetAttributes = {
 					5B08E46526C230A200B4914A = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					5B093D2A26C3C9EA00674D25 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+						TestTargetID = 5B08E46526C230A200B4914A;
 					};
 				};
 			};
@@ -313,6 +390,7 @@
 			projectRoot = "";
 			targets = (
 				5B08E46526C230A200B4914A /* VIP-Implementation-Swift */,
+				5B093D2A26C3C9EA00674D25 /* VIP-Implementation-SwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +402,13 @@
 			files = (
 				5B08E47626C230A400B4914A /* LaunchScreen.storyboard in Resources */,
 				5B08E47326C230A400B4914A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B093D2926C3C9EA00674D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +468,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B093D2726C3C9EA00674D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */,
+				5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */,
+				5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B093D3126C3C9EA00674D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B08E46526C230A200B4914A /* VIP-Implementation-Swift */;
+			targetProxy = 5B093D3026C3C9EA00674D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B08E47426C230A400B4914A /* LaunchScreen.storyboard */ = {
@@ -551,6 +654,47 @@
 			};
 			name = Release;
 		};
+		5B093D3326C3C9EA00674D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "VIP-Implementation-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duytt.VIP-Implementation-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIP-Implementation-Swift.app/VIP-Implementation-Swift";
+			};
+			name = Debug;
+		};
+		5B093D3426C3C9EA00674D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "VIP-Implementation-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duytt.VIP-Implementation-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIP-Implementation-Swift.app/VIP-Implementation-Swift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +712,15 @@
 			buildConfigurations = (
 				5B08E47B26C230A400B4914A /* Debug */,
 				5B08E47C26C230A400B4914A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B093D3226C3C9EA00674D25 /* Build configuration list for PBXNativeTarget "VIP-Implementation-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B093D3326C3C9EA00674D25 /* Debug */,
+				5B093D3426C3C9EA00674D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
