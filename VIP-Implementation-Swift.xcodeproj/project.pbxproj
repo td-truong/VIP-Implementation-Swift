@@ -11,6 +11,10 @@
 		5B08E46E26C230A200B4914A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08E46D26C230A200B4914A /* ViewController.swift */; };
 		5B08E47326C230A400B4914A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B08E47226C230A400B4914A /* Assets.xcassets */; };
 		5B08E47626C230A400B4914A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B08E47426C230A400B4914A /* LaunchScreen.storyboard */; };
+		5B093CC226C3BBAB00674D25 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CBB26C3BBAB00674D25 /* UserListPresenter.swift */; };
+		5B093CC326C3BBAB00674D25 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CBD26C3BBAB00674D25 /* UserListController.swift */; };
+		5B093CC426C3BBAB00674D25 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CBF26C3BBAB00674D25 /* UserListInteractor.swift */; };
+		5B093CC526C3BBAB00674D25 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CC126C3BBAB00674D25 /* UserListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		5B08E47226C230A400B4914A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B08E47526C230A400B4914A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B08E47726C230A400B4914A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B093CBB26C3BBAB00674D25 /* UserListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		5B093CBD26C3BBAB00674D25 /* UserListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
+		5B093CBF26C3BBAB00674D25 /* UserListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		5B093CC126C3BBAB00674D25 /* UserListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		5B08E46826C230A200B4914A /* VIP-Implementation-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				5B093CC626C3BD3100674D25 /* Modules */,
 				5B08E46926C230A200B4914A /* AppDelegate.swift */,
 				5B08E46D26C230A200B4914A /* ViewController.swift */,
 				5B08E47226C230A400B4914A /* Assets.xcassets */,
@@ -59,6 +68,57 @@
 				5B08E47726C230A400B4914A /* Info.plist */,
 			);
 			path = "VIP-Implementation-Swift";
+			sourceTree = "<group>";
+		};
+		5B093CB926C3BBAB00674D25 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CBA26C3BBAB00674D25 /* Presenter */,
+				5B093CBC26C3BBAB00674D25 /* View */,
+				5B093CBE26C3BBAB00674D25 /* Interactor */,
+				5B093CC026C3BBAB00674D25 /* Router */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		5B093CBA26C3BBAB00674D25 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CBB26C3BBAB00674D25 /* UserListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5B093CBC26C3BBAB00674D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CBD26C3BBAB00674D25 /* UserListController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B093CBE26C3BBAB00674D25 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CBF26C3BBAB00674D25 /* UserListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5B093CC026C3BBAB00674D25 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CC126C3BBAB00674D25 /* UserListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5B093CC626C3BD3100674D25 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5B093CB926C3BBAB00674D25 /* UserList */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B08E46E26C230A200B4914A /* ViewController.swift in Sources */,
+				5B093CC226C3BBAB00674D25 /* UserListPresenter.swift in Sources */,
+				5B093CC426C3BBAB00674D25 /* UserListInteractor.swift in Sources */,
+				5B093CC526C3BBAB00674D25 /* UserListRouter.swift in Sources */,
+				5B093CC326C3BBAB00674D25 /* UserListController.swift in Sources */,
 				5B08E46A26C230A200B4914A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
