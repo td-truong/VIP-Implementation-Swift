@@ -14,6 +14,14 @@ protocol UserListViewProtocol: AnyObject {
 
 class UserListController: UIViewController, UserListViewProtocol {
     
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(dataSource: self, delegate: self)
+        tableView.rowHeight = 100
+        tableView.tableFooterView = UIView()
+        tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.reuseId)
+        return tableView
+    }()
+    
     let interactor: UserListInteractorProtocol!
     let router: UserListRouterProtocol!
     
@@ -29,7 +37,12 @@ class UserListController: UIViewController, UserListViewProtocol {
     }
     
     private func setupViews() {
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -38,3 +51,13 @@ class UserListController: UIViewController, UserListViewProtocol {
 
 }
 
+extension UserListController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseId, for: indexPath) as! UserCell
+        return cell
+    }
+}

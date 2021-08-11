@@ -52,6 +52,9 @@
 		5B093D0F26C3C06C00674D25 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CEA26C3C06C00674D25 /* ConstraintDirectionalInsets.swift */; };
 		5B093D1026C3C06C00674D25 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CEB26C3C06C00674D25 /* ConstraintLayoutSupportDSL.swift */; };
 		5B093D1126C3C06C00674D25 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093CEC26C3C06C00674D25 /* ConstraintMakerRelatable.swift */; };
+		5B093D2126C3C4A500674D25 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2026C3C4A500674D25 /* UserCell.swift */; };
+		5B093D2526C3C4B500674D25 /* UITableView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2326C3C4B500674D25 /* UITableView+Exts.swift */; };
+		5B093D2626C3C4B500674D25 /* UITableViewCell+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D2426C3C4B500674D25 /* UITableViewCell+Exts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		5B093CEA26C3C06C00674D25 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		5B093CEB26C3C06C00674D25 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		5B093CEC26C3C06C00674D25 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		5B093D2026C3C4A500674D25 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		5B093D2326C3C4B500674D25 /* UITableView+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Exts.swift"; sourceTree = "<group>"; };
+		5B093D2426C3C4B500674D25 /* UITableViewCell+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Exts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				5B093CBD26C3BBAB00674D25 /* UserListController.swift */,
+				5B093D2026C3C4A500674D25 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,9 +250,19 @@
 		5B093D1226C3C06E00674D25 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B093D2226C3C4B500674D25 /* Utils */,
 				5B093CC726C3C06C00674D25 /* SnapKit */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5B093D2226C3C4B500674D25 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D2326C3C4B500674D25 /* UITableView+Exts.swift */,
+				5B093D2426C3C4B500674D25 /* UITableViewCell+Exts.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +354,10 @@
 				5B093D0926C3C06C00674D25 /* ConstraintItem.swift in Sources */,
 				5B093CF826C3C06C00674D25 /* ConstraintPriority.swift in Sources */,
 				5B093CF526C3C06C00674D25 /* ConstraintMakerFinalizable.swift in Sources */,
+				5B093D2126C3C4A500674D25 /* UserCell.swift in Sources */,
 				5B093D0C26C3C06C00674D25 /* ConstraintRelatableTarget.swift in Sources */,
 				5B093D0B26C3C06C00674D25 /* Debugging.swift in Sources */,
+				5B093D2526C3C4B500674D25 /* UITableView+Exts.swift in Sources */,
 				5B093CED26C3C06C00674D25 /* ConstraintMultiplierTarget.swift in Sources */,
 				5B093D0E26C3C06C00674D25 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				5B093CC326C3BBAB00674D25 /* UserListController.swift in Sources */,
@@ -350,6 +369,7 @@
 				5B093CEE26C3C06C00674D25 /* LayoutConstraintItem.swift in Sources */,
 				5B093D0626C3C06C00674D25 /* ConstraintRelation.swift in Sources */,
 				5B093D0426C3C06C00674D25 /* ConstraintMakerEditable.swift in Sources */,
+				5B093D2626C3C4B500674D25 /* UITableViewCell+Exts.swift in Sources */,
 				5B093D0826C3C06C00674D25 /* ConstraintView+Extensions.swift in Sources */,
 				5B093CFD26C3C06C00674D25 /* UILayoutSupport+Extensions.swift in Sources */,
 				5B093D1126C3C06C00674D25 /* ConstraintMakerRelatable.swift in Sources */,
