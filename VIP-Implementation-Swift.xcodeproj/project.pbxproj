@@ -61,6 +61,9 @@
 		5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */; };
 		5B093D4226C4130900674D25 /* MockUserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4126C4130900674D25 /* MockUserListRouter.swift */; };
 		5B093D4426C41A5400674D25 /* MockUserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */; };
+		5B093D4726C41BBD00674D25 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4626C41BBD00674D25 /* UserRepository.swift */; };
+		5B093D4A26C41C2600674D25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4926C41C2600674D25 /* User.swift */; };
+		5B093D4C26C41EDE00674D25 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,9 @@
 		5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListInteractor.swift; sourceTree = "<group>"; };
 		5B093D4126C4130900674D25 /* MockUserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListRouter.swift; sourceTree = "<group>"; };
 		5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListPresenter.swift; sourceTree = "<group>"; };
+		5B093D4626C41BBD00674D25 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		5B093D4926C41C2600674D25 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +289,8 @@
 		5B093D1226C3C06E00674D25 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B093D4826C41C1B00674D25 /* Entities */,
+				5B093D4526C41BA800674D25 /* Network */,
 				5B093D2226C3C4B500674D25 /* Utils */,
 				5B093CC726C3C06C00674D25 /* SnapKit */,
 			);
@@ -329,6 +337,7 @@
 		5B093D3D26C412E200674D25 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				5B093D4D26C41EE100674D25 /* Repositories */,
 				5B093D3E26C412EA00674D25 /* UserList */,
 			);
 			path = Mocks;
@@ -342,6 +351,30 @@
 				5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */,
 			);
 			path = UserList;
+			sourceTree = "<group>";
+		};
+		5B093D4526C41BA800674D25 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D4626C41BBD00674D25 /* UserRepository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5B093D4826C41C1B00674D25 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D4926C41C2600674D25 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5B093D4D26C41EE100674D25 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +497,7 @@
 				5B093D0926C3C06C00674D25 /* ConstraintItem.swift in Sources */,
 				5B093CF826C3C06C00674D25 /* ConstraintPriority.swift in Sources */,
 				5B093CF526C3C06C00674D25 /* ConstraintMakerFinalizable.swift in Sources */,
+				5B093D4A26C41C2600674D25 /* User.swift in Sources */,
 				5B093D2126C3C4A500674D25 /* UserCell.swift in Sources */,
 				5B093D0C26C3C06C00674D25 /* ConstraintRelatableTarget.swift in Sources */,
 				5B093D0B26C3C06C00674D25 /* Debugging.swift in Sources */,
@@ -489,6 +523,7 @@
 				5B093D0126C3C06C00674D25 /* Typealiases.swift in Sources */,
 				5B093CF426C3C06C00674D25 /* ConstraintInsets.swift in Sources */,
 				5B093CF726C3C06C00674D25 /* ConstraintMakerExtendable.swift in Sources */,
+				5B093D4726C41BBD00674D25 /* UserRepository.swift in Sources */,
 				5B093CF026C3C06C00674D25 /* ConstraintDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */,
+				5B093D4C26C41EDE00674D25 /* MockUserRepository.swift in Sources */,
 				5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */,
 				5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */,
 				5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */,

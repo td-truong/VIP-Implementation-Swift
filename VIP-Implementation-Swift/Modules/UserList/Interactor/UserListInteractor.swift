@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserListInteractorProtocol {
     var presenter: UserListPresenterProtocol { get }
+    var repository: UserRepositoryProtocol { get }
     
     func viewDidLoad()
 }
@@ -16,13 +17,18 @@ protocol UserListInteractorProtocol {
 class UserListInteractor: UserListInteractorProtocol {
     
     let presenter: UserListPresenterProtocol
+    let repository: UserRepositoryProtocol
     
-    init(presenter: UserListPresenterProtocol) {
+    init(presenter: UserListPresenterProtocol, repository: UserRepositoryProtocol) {
         self.presenter = presenter
+        self.repository = repository
     }
     
     func viewDidLoad() {
         presenter.viewDidLoad()
+        repository.getUsers { result in
+            
+        }
     }
     
 }

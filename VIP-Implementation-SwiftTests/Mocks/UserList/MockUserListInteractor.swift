@@ -9,7 +9,8 @@
 
 class MockUserListInteractor: UserListInteractorProtocol {
     
-    var presenter: UserListPresenterProtocol = UserListPresenter()
+    var presenter: UserListPresenterProtocol = MockUserListPresenter()
+    var repository: UserRepositoryProtocol = MockUserRepository()
     
     var viewDidLoadCalledNumber = 0
     
