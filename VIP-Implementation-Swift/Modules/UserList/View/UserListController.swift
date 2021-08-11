@@ -16,7 +16,7 @@ class UserListController: UIViewController, UserListViewProtocol {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(dataSource: self, delegate: self)
-        tableView.rowHeight = 100
+        tableView.rowHeight = 60
         tableView.tableFooterView = UIView()
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.reuseId)
         return tableView
@@ -24,6 +24,8 @@ class UserListController: UIViewController, UserListViewProtocol {
     
     let interactor: UserListInteractorProtocol!
     let router: UserListRouterProtocol!
+    
+    var cellViewModels: [UserCellViewModel] = []
     
     init(interactor: UserListInteractorProtocol, router: UserListRouterProtocol) {
         self.interactor = interactor
@@ -53,11 +55,13 @@ class UserListController: UIViewController, UserListViewProtocol {
 
 extension UserListController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cellViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseId, for: indexPath) as! UserCell
+        let viewModel = cellViewModels[indexPath.row]
+        cell.update(with: viewModel)
         return cell
     }
 }

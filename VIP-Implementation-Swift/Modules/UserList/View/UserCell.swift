@@ -49,4 +49,14 @@ class UserCell: UITableViewCell {
         }
     }
     
+    func update(with viewModel: UserCellViewModel) {
+        nameLabel.text = viewModel.nameText
+        emailLabel.text = viewModel.emailText
+    }
+    
+}
+
+struct UserCellViewModel {
+    var nameText: String?
+    var emailText: String?
 }
