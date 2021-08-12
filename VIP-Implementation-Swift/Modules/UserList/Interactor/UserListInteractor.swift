@@ -12,6 +12,7 @@ protocol UserListInteractorProtocol {
     var repository: UserRepositoryProtocol { get }
     
     func viewDidLoad()
+    func getUsers()
 }
 
 class UserListInteractor: UserListInteractorProtocol {
@@ -26,7 +27,11 @@ class UserListInteractor: UserListInteractorProtocol {
     
     func viewDidLoad() {
         presenter.viewDidLoad()
-        repository.getUsers { result in
+        getUsers()
+    }
+    
+    func getUsers() {
+        repository.getUsers { users, error in
             
         }
     }

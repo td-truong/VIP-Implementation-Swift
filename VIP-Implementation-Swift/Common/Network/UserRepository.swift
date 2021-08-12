@@ -8,13 +8,41 @@
 import Foundation
 
 protocol UserRepositoryProtocol {
-    func getUsers(completion: @escaping (Result<[User], Error>) -> Void)
+    var session: URLSessionProtocol { get }
+    
+    @discardableResult
+    func getUsers(completion: @escaping ([User]?, Error?) -> Void) -> URLSessionDataTask
 }
 
 class UserRepository: UserRepositoryProtocol {
     
-    func getUsers(completion: @escaping (Result<[User], Error>) -> Void) {
-        
+    let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
+    
+    func getUsers(completion: @escaping ([User]?, Error?) -> Void) -> URLSessionDataTask {
+        let usersURL = URL(string: "users", relativeTo: Endpoints.baseURL)!
+        let dataTask = session.dataTask(with: usersURL) { data, response, error in
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200,
+                  error == nil,
+                  let data = data else {
+                completion(nil, error)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let users = try decoder.decode([User].self, from: data)
+                completion(users, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+        dataTask.resume()
+        return dataTask
     }
     
 }

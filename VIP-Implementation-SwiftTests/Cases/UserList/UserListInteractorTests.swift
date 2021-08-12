@@ -11,18 +11,21 @@ import XCTest
 class UserListInteractorTests: XCTestCase {
 
     var mockPresenter: MockUserListPresenter!
+    var mockSession: MockURLSession!
     var mockRepository: MockUserRepository!
     var sut: UserListInteractor!
     
     override func setUp() {
         super.setUp()
         mockPresenter = MockUserListPresenter()
-        mockRepository = MockUserRepository()
+        mockSession = MockURLSession()
+        mockRepository = MockUserRepository(session: mockSession)
         sut = UserListInteractor(presenter: mockPresenter, repository: mockRepository)
     }
     
     override func tearDown() {
         mockPresenter = nil
+        mockSession = nil
         mockRepository = nil
         sut = nil
         super.tearDown()
@@ -36,6 +39,12 @@ class UserListInteractorTests: XCTestCase {
     
     func test_whenInteractorCalledViewDidLoad_repositoryCallsGetUsers() {
         sut.viewDidLoad()
+        
+        XCTAssertEqual(mockRepository.getUsersCalledNumber, 1)
+    }
+    
+    func test_whenInteractorCalledGetUsers_repositoryCallsGetUsers() {
+        sut.getUsers()
         
         XCTAssertEqual(mockRepository.getUsersCalledNumber, 1)
     }

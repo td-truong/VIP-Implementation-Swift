@@ -64,6 +64,11 @@
 		5B093D4726C41BBD00674D25 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4626C41BBD00674D25 /* UserRepository.swift */; };
 		5B093D4A26C41C2600674D25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4926C41C2600674D25 /* User.swift */; };
 		5B093D4C26C41EDE00674D25 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */; };
+		5B093D4F26C4220500674D25 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4E26C4220500674D25 /* URLSessionProtocol.swift */; };
+		5B093D5326C422CC00674D25 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5226C422CC00674D25 /* Endpoints.swift */; };
+		5B093D5626C4246A00674D25 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5526C4246A00674D25 /* MockURLSession.swift */; };
+		5B093D5826C424F500674D25 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5726C424F500674D25 /* MockURLSessionDataTask.swift */; };
+		5B093D5B26C4B3A400674D25 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +143,11 @@
 		5B093D4626C41BBD00674D25 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5B093D4926C41C2600674D25 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		5B093D4E26C4220500674D25 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		5B093D5226C422CC00674D25 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		5B093D5526C4246A00674D25 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		5B093D5726C424F500674D25 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +329,7 @@
 		5B093D3526C3CA3900674D25 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				5B093D5926C4B38800674D25 /* Repositories */,
 				5B093D3626C3CA4400674D25 /* UserList */,
 			);
 			path = Cases;
@@ -337,6 +348,7 @@
 		5B093D3D26C412E200674D25 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				5B093D5426C4246000674D25 /* Network */,
 				5B093D4D26C41EE100674D25 /* Repositories */,
 				5B093D3E26C412EA00674D25 /* UserList */,
 			);
@@ -357,6 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				5B093D4626C41BBD00674D25 /* UserRepository.swift */,
+				5B093D4E26C4220500674D25 /* URLSessionProtocol.swift */,
+				5B093D5226C422CC00674D25 /* Endpoints.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -373,6 +387,23 @@
 			isa = PBXGroup;
 			children = (
 				5B093D4B26C41EDE00674D25 /* MockUserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5B093D5426C4246000674D25 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D5526C4246A00674D25 /* MockURLSession.swift */,
+				5B093D5726C424F500674D25 /* MockURLSessionDataTask.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5B093D5926C4B38800674D25 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -477,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B093D4F26C4220500674D25 /* URLSessionProtocol.swift in Sources */,
 				5B093D0A26C3C06C00674D25 /* Constraint.swift in Sources */,
 				5B093CEF26C3C06C00674D25 /* ConstraintMakerPrioritizable.swift in Sources */,
 				5B093D0F26C3C06C00674D25 /* ConstraintDirectionalInsets.swift in Sources */,
@@ -510,6 +542,7 @@
 				5B093D0726C3C06C00674D25 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				5B093CFE26C3C06C00674D25 /* ConstraintView.swift in Sources */,
 				5B093D0D26C3C06C00674D25 /* LayoutConstraint.swift in Sources */,
+				5B093D5326C422CC00674D25 /* Endpoints.swift in Sources */,
 				5B093CEE26C3C06C00674D25 /* LayoutConstraintItem.swift in Sources */,
 				5B093D0626C3C06C00674D25 /* ConstraintRelation.swift in Sources */,
 				5B093D0426C3C06C00674D25 /* ConstraintMakerEditable.swift in Sources */,
@@ -532,11 +565,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B093D5626C4246A00674D25 /* MockURLSession.swift in Sources */,
 				5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */,
 				5B093D4C26C41EDE00674D25 /* MockUserRepository.swift in Sources */,
 				5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */,
 				5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */,
 				5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */,
+				5B093D5B26C4B3A400674D25 /* UserRepositoryTests.swift in Sources */,
+				5B093D5826C424F500674D25 /* MockURLSessionDataTask.swift in Sources */,
 				5B093D4226C4130900674D25 /* MockUserListRouter.swift in Sources */,
 				5B093D4426C41A5400674D25 /* MockUserListPresenter.swift in Sources */,
 			);
@@ -615,7 +651,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -670,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
