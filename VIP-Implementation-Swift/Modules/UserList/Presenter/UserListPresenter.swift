@@ -20,15 +20,20 @@ class UserListPresenter: UserListPresenterProtocol {
     weak var view: UserListViewProtocol?
     
     func viewDidLoad() {
-        
+        view?.showLoading()
     }
     
     func didGetUsers(_ users: [User]) {
-        
+        view?.hideLoading()
+        view?.cellViewModels = users.map {
+            UserCellViewModel(nameText: $0.name, emailText: "✉️ \($0.email ?? "")")
+        }
+        view?.refresh()
     }
     
     func didGetError(_ error: Error) {
-        
+        view?.hideLoading()
+        view?.showError(title: error.localizedDescription)
     }
     
 }

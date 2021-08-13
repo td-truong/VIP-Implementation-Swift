@@ -69,6 +69,8 @@
 		5B093D5626C4246A00674D25 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5526C4246A00674D25 /* MockURLSession.swift */; };
 		5B093D5826C424F500674D25 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5726C424F500674D25 /* MockURLSessionDataTask.swift */; };
 		5B093D5B26C4B3A400674D25 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */; };
+		5BA4EEDD26C5F05D00909792 /* MockUserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4EEDC26C5F05D00909792 /* MockUserListController.swift */; };
+		5BA4EEE026C5F55C00909792 /* LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4EEDF26C5F55C00909792 /* LocalizedError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		5B093D5526C4246A00674D25 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		5B093D5726C424F500674D25 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
+		5BA4EEDC26C5F05D00909792 /* MockUserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListController.swift; sourceTree = "<group>"; };
+		5BA4EEDF26C5F55C00909792 /* LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +325,7 @@
 			children = (
 				5B093D3526C3CA3900674D25 /* Cases */,
 				5B093D3D26C412E200674D25 /* Mocks */,
+				5BA4EEDE26C5F54F00909792 /* Helpers */,
 				5B093D2F26C3C9EA00674D25 /* Info.plist */,
 			);
 			path = "VIP-Implementation-SwiftTests";
@@ -361,6 +366,7 @@
 				5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */,
 				5B093D4126C4130900674D25 /* MockUserListRouter.swift */,
 				5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */,
+				5BA4EEDC26C5F05D00909792 /* MockUserListController.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -406,6 +412,14 @@
 				5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5BA4EEDE26C5F54F00909792 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BA4EEDF26C5F55C00909792 /* LocalizedError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,9 +579,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA4EEE026C5F55C00909792 /* LocalizedError.swift in Sources */,
 				5B093D5626C4246A00674D25 /* MockURLSession.swift in Sources */,
 				5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */,
 				5B093D4C26C41EDE00674D25 /* MockUserRepository.swift in Sources */,
+				5BA4EEDD26C5F05D00909792 /* MockUserListController.swift in Sources */,
 				5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */,
 				5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */,
 				5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */,

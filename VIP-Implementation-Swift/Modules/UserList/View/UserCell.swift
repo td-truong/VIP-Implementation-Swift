@@ -56,7 +56,7 @@ class UserCell: UITableViewCell {
     
 }
 
-struct UserCellViewModel {
+struct UserCellViewModel: Equatable {
     var nameText: String?
     var emailText: String?
 }

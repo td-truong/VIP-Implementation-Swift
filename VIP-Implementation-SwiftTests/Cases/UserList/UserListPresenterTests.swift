@@ -6,27 +6,52 @@
 //
 
 import XCTest
+@testable import VIP_Implementation_Swift
 
 class UserListPresenterTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var mockController: MockUserListController!
+    var sut: UserListPresenter!
+    
+    override func setUp() {
+        super.setUp()
+        mockController = MockUserListController()
+        sut = UserListPresenter()
+        sut.view = mockController
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        mockController = nil
+        sut = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_viewDidLoad_viewShowLoading() {
+        sut.viewDidLoad()
+        
+        XCTAssert(mockController.isLoading == true)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_givenUsers_didGetUsers_viewCallsShowLoadingAndRefresh() {
+        let expectedUsers = [
+            User(name: "John", email: "example@somemail.com")
+        ]
+        let expectedCellViewModels = expectedUsers.map {
+            UserCellViewModel(nameText: $0.name, emailText: "✉️ \($0.email ?? "")")
         }
+        sut.didGetUsers(expectedUsers)
+        
+        XCTAssert(mockController.isLoading == false)
+        XCTAssertEqual(mockController.refreshCalledNumber, 1)
+        XCTAssertEqual(mockController.cellViewModels, expectedCellViewModels)
+    }
+    
+    func test_givenError_didGetError_viewCallsHideLoadingAndShowError() {
+        let expectedError = CustomError.default
+        sut.didGetError(expectedError)
+        
+        XCTAssert(mockController.isLoading == false)
+        XCTAssertEqual(mockController.errorTitle, expectedError.localizedDescription)
     }
 
 }

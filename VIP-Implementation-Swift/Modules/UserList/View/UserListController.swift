@@ -10,6 +10,12 @@ import UIKit
 protocol UserListViewProtocol: AnyObject {
     var interactor: UserListInteractorProtocol! { get }
     var router: UserListRouterProtocol! { get }
+    var cellViewModels: [UserCellViewModel] { get set }
+    
+    func showLoading()
+    func hideLoading()
+    func refresh()
+    func showError(title: String)
 }
 
 class UserListController: UIViewController, UserListViewProtocol {
@@ -46,6 +52,22 @@ class UserListController: UIViewController, UserListViewProtocol {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func refresh() {
+        
+    }
+    
+    func showError(title: String) {
+        
+    }
+    
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
     }
     
     required init?(coder: NSCoder) {
