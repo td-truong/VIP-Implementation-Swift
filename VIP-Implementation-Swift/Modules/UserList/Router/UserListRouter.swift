@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserListRouterProtocol {
-    static func create() -> UIViewController
+    
 }
 
 class UserListRouter: UserListRouterProtocol {

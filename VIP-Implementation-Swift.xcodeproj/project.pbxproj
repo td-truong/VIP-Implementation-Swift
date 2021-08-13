@@ -58,6 +58,9 @@
 		5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */; };
 		5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */; };
 		5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */; };
+		5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */; };
+		5B093D4226C4130900674D25 /* MockUserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4126C4130900674D25 /* MockUserListRouter.swift */; };
+		5B093D4426C41A5400674D25 /* MockUserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,9 @@
 		5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListControllerTests.swift; sourceTree = "<group>"; };
 		5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractorTests.swift; sourceTree = "<group>"; };
 		5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterTests.swift; sourceTree = "<group>"; };
+		5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListInteractor.swift; sourceTree = "<group>"; };
+		5B093D4126C4130900674D25 /* MockUserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListRouter.swift; sourceTree = "<group>"; };
+		5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				5B093D3526C3CA3900674D25 /* Cases */,
+				5B093D3D26C412E200674D25 /* Mocks */,
 				5B093D2F26C3C9EA00674D25 /* Info.plist */,
 			);
 			path = "VIP-Implementation-SwiftTests";
@@ -315,6 +322,24 @@
 				5B093D3726C3CA8C00674D25 /* UserListControllerTests.swift */,
 				5B093D3926C3CAA400674D25 /* UserListInteractorTests.swift */,
 				5B093D3B26C3CAAD00674D25 /* UserListPresenterTests.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		5B093D3D26C412E200674D25 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D3E26C412EA00674D25 /* UserList */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5B093D3E26C412EA00674D25 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				5B093D3F26C412FE00674D25 /* MockUserListInteractor.swift */,
+				5B093D4126C4130900674D25 /* MockUserListRouter.swift */,
+				5B093D4326C41A5400674D25 /* MockUserListPresenter.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -475,6 +500,9 @@
 				5B093D3826C3CA8C00674D25 /* UserListControllerTests.swift in Sources */,
 				5B093D3C26C3CAAD00674D25 /* UserListPresenterTests.swift in Sources */,
 				5B093D3A26C3CAA400674D25 /* UserListInteractorTests.swift in Sources */,
+				5B093D4026C412FE00674D25 /* MockUserListInteractor.swift in Sources */,
+				5B093D4226C4130900674D25 /* MockUserListRouter.swift in Sources */,
+				5B093D4426C41A5400674D25 /* MockUserListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

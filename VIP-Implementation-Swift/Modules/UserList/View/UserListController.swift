@@ -36,6 +36,7 @@ class UserListController: UIViewController, UserListViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        interactor.viewDidLoad()
     }
     
     private func setupViews() {

@@ -6,27 +6,29 @@
 //
 
 import XCTest
+@testable import VIP_Implementation_Swift
 
 class UserListInteractorTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var mockPresenter: MockUserListPresenter!
+    var sut: UserListInteractor!
+    
+    override func setUp() {
+        super.setUp()
+        mockPresenter = MockUserListPresenter()
+        sut = UserListInteractor(presenter: mockPresenter)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        mockPresenter = nil
+        sut = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_whenInteractorCalledViewDidLoad_presenterCallsViewDidLoad() {
+        sut.viewDidLoad()
+        
+        XCTAssertEqual(mockPresenter.viewDidLoadCalledNumber, 1)
     }
 
 }

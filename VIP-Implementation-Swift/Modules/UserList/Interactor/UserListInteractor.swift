@@ -9,6 +9,8 @@ import Foundation
 
 protocol UserListInteractorProtocol {
     var presenter: UserListPresenterProtocol { get }
+    
+    func viewDidLoad()
 }
 
 class UserListInteractor: UserListInteractorProtocol {
@@ -17,6 +19,10 @@ class UserListInteractor: UserListInteractorProtocol {
     
     init(presenter: UserListPresenterProtocol) {
         self.presenter = presenter
+    }
+    
+    func viewDidLoad() {
+        presenter.viewDidLoad()
     }
     
 }
