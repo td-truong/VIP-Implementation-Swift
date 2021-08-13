@@ -31,8 +31,13 @@ class UserListInteractor: UserListInteractorProtocol {
     }
     
     func getUsers() {
-        repository.getUsers { users, error in
+        repository.getUsers { [weak self] users, error in
+            if let error = error {
+                self?.presenter.didGetError(error)
+                return
+            }
             
+            self?.presenter.didGetUsers(users ?? [])
         }
     }
     

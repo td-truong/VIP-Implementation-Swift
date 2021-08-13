@@ -17,9 +17,11 @@ class MockUserRepository: UserRepositoryProtocol {
     }
     
     var getUsersCalledNumber = 0
+    var getUsersCompletion: (([User]?, Error?) -> Void)?
     
     func getUsers(completion: @escaping ([User]?, Error?) -> Void) -> URLSessionDataTask {
         getUsersCalledNumber += 1
+        getUsersCompletion = completion
         return URLSessionDataTask()
     }
     

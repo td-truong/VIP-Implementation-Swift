@@ -11,6 +11,8 @@ protocol UserListPresenterProtocol {
     var view: UserListViewProtocol? { get set }
     
     func viewDidLoad()
+    func didGetUsers(_ users: [User])
+    func didGetError(_ error: Error)
 }
 
 class UserListPresenter: UserListPresenterProtocol {
@@ -18,6 +20,14 @@ class UserListPresenter: UserListPresenterProtocol {
     weak var view: UserListViewProtocol?
     
     func viewDidLoad() {
+        
+    }
+    
+    func didGetUsers(_ users: [User]) {
+        
+    }
+    
+    func didGetError(_ error: Error) {
         
     }
     
