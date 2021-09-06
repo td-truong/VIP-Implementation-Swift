@@ -2,7 +2,7 @@
 //  MockUserListController.swift
 //  VIP-Implementation-SwiftTests
 //
-//  Created by Machintosh on 13/08/2021.
+//  Created by Duy Truong on 13/08/2021.
 //
 
 import UIKit

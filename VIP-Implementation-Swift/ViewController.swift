@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  VIP-Implementation-Swift
 //
-//  Created by Machintosh on 10/08/2021.
+//  Created by Duy Truong on 10/08/2021.
 //
 
 import UIKit

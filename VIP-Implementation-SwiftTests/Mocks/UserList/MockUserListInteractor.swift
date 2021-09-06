@@ -2,7 +2,7 @@
 //  MockUserListInteractor.swift
 //  VIP-Implementation-SwiftTests
 //
-//  Created by Machintosh on 11/08/2021.
+//  Created by Duy Truong on 11/08/2021.
 //
 
 import Foundation

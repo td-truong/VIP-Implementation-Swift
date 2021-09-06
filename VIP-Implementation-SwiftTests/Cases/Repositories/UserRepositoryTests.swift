@@ -2,7 +2,7 @@
 //  UserRepositoryTests.swift
 //  VIP-Implementation-SwiftTests
 //
-//  Created by Machintosh on 12/08/2021.
+//  Created by Duy Truong on 12/08/2021.
 //
 
 import XCTest
