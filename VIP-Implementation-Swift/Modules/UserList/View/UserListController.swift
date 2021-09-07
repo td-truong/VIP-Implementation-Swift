@@ -8,8 +8,8 @@
 import UIKit
 
 protocol UserListViewProtocol: AnyObject {
-    var interactor: UserListInteractorProtocol! { get }
-    var router: UserListRouterProtocol! { get }
+    var interactor: UserListInteractorProtocol { get }
+    var router: UserListRouterProtocol { get }
     var cellViewModels: [UserCellViewModel] { get set }
     
     func showLoading()
@@ -28,8 +28,8 @@ class UserListController: UIViewController, UserListViewProtocol {
         return tableView
     }()
     
-    let interactor: UserListInteractorProtocol!
-    let router: UserListRouterProtocol!
+    let interactor: UserListInteractorProtocol
+    let router: UserListRouterProtocol
     
     var cellViewModels: [UserCellViewModel] = []
     
@@ -55,19 +55,19 @@ class UserListController: UIViewController, UserListViewProtocol {
     }
     
     func refresh() {
-        
+        tableView.reloadData()
     }
     
     func showError(title: String) {
-        
+        // Show error
     }
     
     func showLoading() {
-        
+        // Show loading
     }
     
     func hideLoading() {
-        
+        // Hide loading
     }
     
     required init?(coder: NSCoder) {
