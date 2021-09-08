@@ -13,6 +13,7 @@ protocol UserListPresenterProtocol {
     func viewDidLoad()
     func didGetUsers(_ users: [User])
     func didGetError(_ error: Error)
+    func selectUser(_ user: User)
 }
 
 class UserListPresenter: UserListPresenterProtocol {
@@ -34,6 +35,10 @@ class UserListPresenter: UserListPresenterProtocol {
     func didGetError(_ error: Error) {
         view?.hideLoading()
         view?.showError(title: error.localizedDescription)
+    }
+    
+    func selectUser(_ user: User) {
+        view?.showDetails(user: user)
     }
     
 }

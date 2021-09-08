@@ -13,12 +13,15 @@ protocol UserListInteractorProtocol {
     
     func viewDidLoad()
     func getUsers()
+    func selectUser(index: Int)
 }
 
 class UserListInteractor: UserListInteractorProtocol {
     
     let presenter: UserListPresenterProtocol
     let repository: UserRepositoryProtocol
+    
+    private var users: [User] = []
     
     init(presenter: UserListPresenterProtocol, repository: UserRepositoryProtocol) {
         self.presenter = presenter
@@ -37,8 +40,16 @@ class UserListInteractor: UserListInteractorProtocol {
                 return
             }
             
-            self?.presenter.didGetUsers(users ?? [])
+            if let users = users {
+                self?.users = users
+                self?.presenter.didGetUsers(users)
+            }
         }
+    }
+    
+    func selectUser(index: Int) {
+        let user = users[index]
+        presenter.selectUser(user)
     }
     
 }

@@ -10,9 +10,9 @@ import UIKit
 
 class MockUserListController: UserListViewProtocol {
     
-    var interactor: UserListInteractorProtocol!
+    var interactor: UserListInteractorProtocol
     
-    var router: UserListRouterProtocol!
+    var router: UserListRouterProtocol
     
     var cellViewModels: [UserCellViewModel] = []
     var isLoading: Bool?

@@ -71,6 +71,10 @@
 		5B093D5B26C4B3A400674D25 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */; };
 		5BA4EEDD26C5F05D00909792 /* MockUserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4EEDC26C5F05D00909792 /* MockUserListController.swift */; };
 		5BA4EEE026C5F55C00909792 /* LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4EEDF26C5F55C00909792 /* LocalizedError.swift */; };
+		BC736D0D26E7EDFC00600544 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736D0626E7EDFC00600544 /* UserDetailsPresenter.swift */; };
+		BC736D0E26E7EDFC00600544 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736D0826E7EDFC00600544 /* UserDetailsController.swift */; };
+		BC736D0F26E7EDFC00600544 /* UserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736D0A26E7EDFC00600544 /* UserDetailsInteractor.swift */; };
+		BC736D1026E7EDFC00600544 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736D0C26E7EDFC00600544 /* UserDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +156,10 @@
 		5B093D5A26C4B3A400674D25 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 		5BA4EEDC26C5F05D00909792 /* MockUserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListController.swift; sourceTree = "<group>"; };
 		5BA4EEDF26C5F55C00909792 /* LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedError.swift; sourceTree = "<group>"; };
+		BC736D0626E7EDFC00600544 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		BC736D0826E7EDFC00600544 /* UserDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		BC736D0A26E7EDFC00600544 /* UserDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractor.swift; sourceTree = "<group>"; };
+		BC736D0C26E7EDFC00600544 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +259,9 @@
 		5B093CC626C3BD3100674D25 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BC736D0426E7EDFC00600544 /* UserDetails */,
 				5B093CB926C3BBAB00674D25 /* UserList */,
+				BC736D0226E7ED5400600544 /* UserDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -422,6 +432,64 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BC736D0226E7ED5400600544 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0326E7ED6E00600544 /* New Group */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		BC736D0326E7ED6E00600544 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BC736D0426E7EDFC00600544 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0526E7EDFC00600544 /* Presenter */,
+				BC736D0726E7EDFC00600544 /* View */,
+				BC736D0926E7EDFC00600544 /* Interactor */,
+				BC736D0B26E7EDFC00600544 /* Router */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		BC736D0526E7EDFC00600544 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0626E7EDFC00600544 /* UserDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC736D0726E7EDFC00600544 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0826E7EDFC00600544 /* UserDetailsController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC736D0926E7EDFC00600544 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0A26E7EDFC00600544 /* UserDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC736D0B26E7EDFC00600544 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC736D0C26E7EDFC00600544 /* UserDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +612,7 @@
 				5B093CF826C3C06C00674D25 /* ConstraintPriority.swift in Sources */,
 				5B093CF526C3C06C00674D25 /* ConstraintMakerFinalizable.swift in Sources */,
 				5B093D4A26C41C2600674D25 /* User.swift in Sources */,
+				BC736D0F26E7EDFC00600544 /* UserDetailsInteractor.swift in Sources */,
 				5B093D2126C3C4A500674D25 /* UserCell.swift in Sources */,
 				5B093D0C26C3C06C00674D25 /* ConstraintRelatableTarget.swift in Sources */,
 				5B093D0B26C3C06C00674D25 /* Debugging.swift in Sources */,
@@ -562,13 +631,16 @@
 				5B093D0426C3C06C00674D25 /* ConstraintMakerEditable.swift in Sources */,
 				5B093D2626C3C4B500674D25 /* UITableViewCell+Exts.swift in Sources */,
 				5B093D0826C3C06C00674D25 /* ConstraintView+Extensions.swift in Sources */,
+				BC736D0D26E7EDFC00600544 /* UserDetailsPresenter.swift in Sources */,
 				5B093CFD26C3C06C00674D25 /* UILayoutSupport+Extensions.swift in Sources */,
 				5B093D1126C3C06C00674D25 /* ConstraintMakerRelatable.swift in Sources */,
+				BC736D0E26E7EDFC00600544 /* UserDetailsController.swift in Sources */,
 				5B093CF326C3C06C00674D25 /* ConstraintPriorityTarget.swift in Sources */,
 				5B093CFB26C3C06C00674D25 /* ConstraintMakerRelatable+Extensions.swift in Sources */,
 				5B093CFC26C3C06C00674D25 /* ConstraintConfig.swift in Sources */,
 				5B093D0126C3C06C00674D25 /* Typealiases.swift in Sources */,
 				5B093CF426C3C06C00674D25 /* ConstraintInsets.swift in Sources */,
+				BC736D1026E7EDFC00600544 /* UserDetailsRouter.swift in Sources */,
 				5B093CF726C3C06C00674D25 /* ConstraintMakerExtendable.swift in Sources */,
 				5B093D4726C41BBD00674D25 /* UserRepository.swift in Sources */,
 				5B093CF026C3C06C00674D25 /* ConstraintDescription.swift in Sources */,

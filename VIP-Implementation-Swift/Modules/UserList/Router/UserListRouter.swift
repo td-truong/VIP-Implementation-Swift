@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserListRouterProtocol {
-    
+    func showDetails(user: User, from vc: UIViewController)
 }
 
 class UserListRouter: UserListRouterProtocol {
@@ -21,6 +21,11 @@ class UserListRouter: UserListRouterProtocol {
         let view = UserListController(interactor: interactor, router: router)
         presenter.view = view
         return view
+    }
+    
+    func showDetails(user: User, from vc: UIViewController) {
+        let userDetailsVC = UserDetailsRouter.create(with: user)
+        vc.navigationController?.pushViewController(userDetailsVC, animated: true)
     }
     
 }

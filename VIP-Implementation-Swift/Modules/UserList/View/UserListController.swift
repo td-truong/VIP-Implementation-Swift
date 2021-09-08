@@ -16,6 +16,7 @@ protocol UserListViewProtocol: AnyObject {
     func hideLoading()
     func refresh()
     func showError(title: String)
+    func showDetails(user: User)
 }
 
 class UserListController: UIViewController, UserListViewProtocol {
@@ -70,6 +71,10 @@ class UserListController: UIViewController, UserListViewProtocol {
         // Hide loading
     }
     
+    func showDetails(user: User) {
+        router.showDetails(user: user, from: self)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -86,5 +91,9 @@ extension UserListController: UITableViewDataSource, UITableViewDelegate {
         let viewModel = cellViewModels[indexPath.row]
         cell.update(with: viewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.selectUser(index: indexPath.row)
     }
 }
